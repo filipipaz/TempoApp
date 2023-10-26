@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --fonte-primaria: 'Inter', sans-serif;
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--fonte-primaria);
+}
+
+header{
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+header .titulo__app{
+    font-size: 64px;
+}
+
+.app__container {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 500px;
+    padding: 12px;
+}
+
+.pesquisar__cidade {
+    margin-bottom: 24px;
+}
+
+.cidade__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.cidade__nome {
+    font-size: 32px;
+}
+
+.cidade__temp {
+    font-size: 64px;
+}
