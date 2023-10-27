@@ -1,23 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200;300;400;600&display=swap');
 
 :root {
-    --fonte-primaria: 'Inter', sans-serif;
-
+    --fonte-primaria: 'Roboto Condensed', sans-serif;
+    --cor-primaria: #3e99c9;
+    --cor-secundaria: #4d7d96;
+    --cor-tres: #1CAEFC;
+    --cor-quatro: #475963;
+    --cor-cinco: #2d3133;
+    --cor-preto: #232122;
+    --cor-branco: #FFF;
 }
 
 body{
-    height: 100vh;
-    width: 100vw;
     font-family: var(--fonte-primaria);
+    background-color: var(--cor-tres);
+    color: var(--cor-branco);
+    text-shadow: #232122c5 2px 2px 2px;
 }
 
 header{
     padding: 20px;
     margin: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 header .titulo__app{
     font-size: 64px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .app__logo {
+    width: 100px;
+
 }
 
 .app__container {
@@ -26,15 +44,40 @@ header .titulo__app{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid;
     border-radius: 5px;
     width: 500px;
     padding: 12px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
 }
 
 .pesquisar__cidade {
     margin-bottom: 24px;
+    display: flex;
 }
+
+.pesquisa {
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    padding: 12px;
+}
+
+.pesquisa:focus {
+    outline: none;
+}
+
+.botao__buscar {
+    padding: 12px;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.botao__buscar:hover {
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
 
 .cidade__info {
     display: flex;
@@ -54,4 +97,5 @@ header .titulo__app{
 .cidade__info__complemento{
     display: flex;
     gap: 32px;
+    margin-top: 12px;
 }

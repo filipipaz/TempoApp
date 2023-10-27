@@ -26,12 +26,12 @@ async function apiCall(cidadeBuscada) {
     } catch {
       buscaNome = buscaConvertida[0].name;
     }
+    console.log(buscaNome)
     cidadeNome.textContent = `${buscaNome}`;
     const lat = buscaConvertida[0].lat;
     const lon = buscaConvertida[0].lon;
 
-   apiTempo(lat, lon);
-
+    apiTempo(lat, lon);
   } catch (error) {
     console.log(error);
   }
@@ -43,17 +43,15 @@ async function apiTempo(lat, lon) {
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=0413047e607634244f04c7ce0351c105`
     );
     const buscaConvertida = await busca.json();
-    console.log(buscaConvertida);
     const tempAtual = Math.floor(buscaConvertida.main.temp);
     const tempMax = Math.floor(buscaConvertida.main.temp_max);
     const tempMin = Math.floor(buscaConvertida.main.temp_min);
     const tempSensacao = Math.floor(buscaConvertida.main.feels_like);
-    
+
     cidadeTemp.textContent = `${tempAtual} ºC`;
     cidadeTempMax.textContent = `Max: ${tempMax} ºC`;
     cidadeTempMin.textContent = `Min: ${tempMin} ºC`;
     cidadeTempSensacao.textContent = `Sensação: ${tempSensacao} ºC`;
-
   } catch (error) {
     console.log(error);
   }
