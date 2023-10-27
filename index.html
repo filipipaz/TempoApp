@@ -9,7 +9,7 @@
     <title>TempoApp</title>
   </head>
   <body>
-    <header>
+    <header class="app__header">
       <h1 class="titulo__app">TempoApp</h1>
     </header>
     <main class="app__container">
@@ -19,11 +19,16 @@
           class="pesquisa"
           placeholder="Busque por uma cidade"
         />
-        <button type="submit">Buscar</button>
+        <button class="botao__buscar">Buscar</button>
       </form>
       <div class="cidade__info">
-        <h2 class="cidade__nome">Cidade</h2>
-        <span class="cidade__temp">24C</span>
+        <h2 class="cidade__nome"></h2>
+        <span class="cidade__temp"></span>
+        <div class="cidade__info__complemento">
+          <p class="cidade__temp__max"></p>
+          <p class="cidade__temp__min"></p>
+          <p class="cidade__temp__sensacao"></p>
+        </div>
       </div>
     </main>
   </body>

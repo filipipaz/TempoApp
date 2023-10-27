@@ -50,3 +50,8 @@ header .titulo__app{
 .cidade__temp {
     font-size: 64px;
 }
+
+.cidade__info__complemento{
+    display: flex;
+    gap: 32px;
+}
