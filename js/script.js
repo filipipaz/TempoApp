@@ -51,8 +51,8 @@ async function apiTempo(lat, lon) {
     
     cidadeTemp.textContent = `${tempAtual} ºC`;
     cidadeTempMax.textContent = `Max: ${tempMax} ºC`;
-    cidadeTempMin.textContent = `Min: ${tempMax} ºC`;
-    cidadeTempSensacao.textContent = `Sensação: ${tempMax} ºC`;
+    cidadeTempMin.textContent = `Min: ${tempMin} ºC`;
+    cidadeTempSensacao.textContent = `Sensação: ${tempSensacao} ºC`;
 
   } catch (error) {
     console.log(error);
