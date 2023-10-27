@@ -19,14 +19,12 @@ async function apiCall(cidadeBuscada) {
       `http://api.openweathermap.org/geo/1.0/direct?q=${cidade}&limit=5&appid=0413047e607634244f04c7ce0351c105`
     );
     let buscaConvertida = await busca.json();
-    console.log(buscaConvertida);
     let buscaNome;
     try {
       buscaNome = buscaConvertida[0].local_names.pt;
     } catch {
       buscaNome = buscaConvertida[0].name;
     }
-    console.log(buscaNome)
     cidadeNome.textContent = `${buscaNome}`;
     const lat = buscaConvertida[0].lat;
     const lon = buscaConvertida[0].lon;
