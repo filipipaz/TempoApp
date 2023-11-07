@@ -16,7 +16,7 @@ async function apiCall(cidadeBuscada) {
   let cidade = cidadeBuscada ? cidadeBuscada : "São Paulo";
   try {
     let busca = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${cidade}&limit=5&appid=0413047e607634244f04c7ce0351c105`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cidade}&limit=5&appid=0413047e607634244f04c7ce0351c105`
     );
     let buscaConvertida = await busca.json();
     let buscaNome;
