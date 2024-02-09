@@ -20,14 +20,14 @@ async function apiCall(cidadeBuscada) {
     );
     let buscaConvertida = await busca.json();
     let buscaNome;
-    try {
-      buscaNome = buscaConvertida[0].local_names.pt;
-    } catch {
+    buscaNome = buscaConvertida[0].local_names.pt;
+    if (buscaNome === undefined) {
       buscaNome = buscaConvertida[0].name;
     }
     cidadeNome.textContent = `${buscaNome}`;
     const lat = buscaConvertida[0].lat;
     const lon = buscaConvertida[0].lon;
+    console.log(buscaConvertida[0].name);
 
     apiTempo(lat, lon);
   } catch (error) {
