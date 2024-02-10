@@ -27,7 +27,6 @@ async function apiCall(cidadeBuscada) {
     cidadeNome.textContent = `${buscaNome}`;
     const lat = buscaConvertida[0].lat;
     const lon = buscaConvertida[0].lon;
-    console.log(buscaConvertida[0].name);
 
     apiTempo(lat, lon);
   } catch (error) {
